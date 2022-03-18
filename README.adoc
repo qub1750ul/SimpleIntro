@@ -1,0 +1,34 @@
+[pass]
+--
+<center>
+	<h1> Simple Intro </h1>
+	<p>
+		A simple theme for hugo. <br/>
+		Based on the original work of
+		<a href="https://github.com/gangjun06/SimpleIntro">gangjun06</a>.
+	</p>
+	<img src="images/screenshot.png" />
+</center>
+--
+
+== Get Started
+
+[literal]
+--
+hugo new site <site-name>
+cd <site-name>
+git submodule add https://github.com/qub1750ul/hugo-simpleIntro themes/simpleIntro
+--
+
+== Development
+
+Switch to the `exampleSite` branch for info on the development workflow.
+
+== Credits
+
+|===
+| Name                                | License     | Description
+| github.com/gangjun06/SimpleIntro    | Apache      | Original work
+| github.com/konpa/devicon/           | MIT License | Demo Site Icon
+| github.com/tailwindlabs/tailwindcss | MIT License | Css Library
+|===
