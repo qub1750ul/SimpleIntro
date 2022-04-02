@@ -3,19 +3,22 @@
 
 name = "SimpleIntro"
 license = "Apache-2.0"
-licenselink = "https://github.com/gangjun06/SimpleIntro/blob/master/LICENSE"
+licenselink = "https://raw.githubusercontent.com/qub1750ul/hugo-simpleIntro/main/LICENSE"
 description = "Simple Single-Page Theme For Hugo"
-homepage = "https://github.com/gangjun06/SimpleIntro"
+
+homepage = "https://github.com/qub1750ul/hugo-simpleIntro"
+demosite = ""
+
 tags = ["clean", "simple", "responsive", "light", "single-page", ""]
 features = []
-min_version = "0.41.0"
+min_version = "0.83.1"
 
 [author]
-  name = "Gangjun"
-  homepage = "https://gangjun.dev"
+  name = "Giuseppe Masino (qub1750ul)"
+  homepage = "https://github.com/qub1750ul"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Gangjun"
+  homepage = "https://gangjun.dev"
+  repo = "https://github.com/gangjun06/SimpleIntro"
