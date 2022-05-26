@@ -1,3 +1,4 @@
 = Changes compared to upstream gangjun06/SimpleIntro
 
 * Projects have a new `imageAlt` field that defines the alt-text for the image.
+* Header names can be changed by changing the `headers.aboutMe`, `headers.projects` and `headers.skills` site parameters.

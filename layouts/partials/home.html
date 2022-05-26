@@ -30,7 +30,7 @@
   <main class="container mx-auto mt-8 px-4 xl:px-0">
     <section id="about" class="md:flex justify-around">
       <div class="my-auto md:mr-4">
-        {{ partial "home_title" (dict "title" "About Me") }}
+        {{ partial "home_title" (dict "title" (default "About Me" $.Site.Params.headers.aboutMe) ) }}
         <div class="flex mt-3 gap-3 text-xl">
           {{ range $data.about.link }}
           <a href="{{.url}}"><i class="{{ .icon }}"></i></a>{{end}}
@@ -52,7 +52,7 @@
     </section>
     <section id="skills" class="mt-12">
       <div class="md:flex justify-center">
-        {{ partial "home_title" (dict "title" "Skills") }}
+        {{ partial "home_title" (dict "title" (default "Skills" $.Site.Params.headers.skills)) }}
       </div>
       
       {{if $data.skills.list}}
@@ -87,7 +87,7 @@
     </section>
     <section id="projects" class="mt-12">
       <div class="md:flex justify-center">
-        {{ partial "home_title" (dict "title" "Projects") }}
+        {{ partial "home_title" (dict "title" (default "Projects" $.Site.Params.headers.projects)) }}
       </div>
       
       {{if $data.skills.list}}
