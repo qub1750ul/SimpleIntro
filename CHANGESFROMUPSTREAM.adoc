@@ -1,0 +1,3 @@
+= Changes compared to upstream gangjun06/SimpleIntro
+
+* Projects have a new `imageAlt` field that defines the alt-text for the image.

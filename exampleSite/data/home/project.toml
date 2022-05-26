@@ -1,6 +1,7 @@
 [[list]]
     title = "lorem"
     image = "https://picsum.photos/400/200"
+    imageAlt = "A random image selected from picsum"
     text = """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -9,6 +10,7 @@
 [[list]]
     title = "lorem"
     image = "https://picsum.photos/400/200"
+    imageAlt = "A random image selected from picsum"
     text = """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus quia, nulla! Maiores et perferendis eaque,
