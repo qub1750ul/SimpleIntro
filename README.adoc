@@ -28,7 +28,8 @@ Switch to the `exampleSite` branch for info on the development workflow.
 
 |===
 | Name                                | License     | Description
+| github.com/devicons/devicon         | MIT License | Icon Library
+| github.com/FortAwesome/Font-Awesome | fontawesome.com/license/free | Icon Library
 | github.com/gangjun06/SimpleIntro    | Apache      | Original work
-| github.com/konpa/devicon/           | MIT License | Demo Site Icon
 | github.com/tailwindlabs/tailwindcss | MIT License | Css Library
 |===
