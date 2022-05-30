@@ -1,3 +1,7 @@
 <footer class="text-center mt-8 py-2 bg-gray-900 text-white">
-  <div>&copy; {{ now.Format "2006" }} {{ $.Site.Params.Name }}</div>
+  {{ range .Site.Data.site.footers.siteFooter}}
+   <div>
+      {{.text | $.RenderString }} &copy; {{ now.Format "2006" }} {{ $.Site.Params.Name }}
+    </div>
+  {{end}}
 </footer>
