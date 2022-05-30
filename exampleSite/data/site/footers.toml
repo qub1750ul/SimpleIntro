@@ -1,0 +1,4 @@
+# Common footer to use site-wide
+[[siteFooter]]
+    text = "Powered by [Hugo](https://gohugo.io/) with [Simple Intro theme](https://github.com/qub1750ul/hugo-simpleIntro) - "
+# More footers could be defined to be used in specific pages/layouts
