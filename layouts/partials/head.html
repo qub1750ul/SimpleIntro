@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS - Local -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/navbar.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/tailwind.min.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/fontawesome/css/all.min.css" >
+
+    <!-- CSS - Remote -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Navbar scrolling script -->
+    <script type="text/javascript">
+    window.addEventListener('scroll', ()=>{
+        const nav = document.querySelector('nav')
+        nav.classList.toggle('onscroll', window.scrollY > 0)
+    })
+    </script>
+
+    <!-- Title attribute -->
+    <title>{{.Title}}</title>
+</head>
