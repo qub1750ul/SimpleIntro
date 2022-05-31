@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <div>
+        <div id="mainBG" style="background-image: url('{{ if $.Site.Params.mainbg }}{{ $.Site.Params.mainbg }}{{ else }}https://picsum.photos/1920/1080{{ end }}');">
+
+            {{ partial "utilities/wave"}}
+
+            <div class="centerAll title font-bold text-center">
+               <h1>404 - Not found</h1>
+            </div>
+        </div>
+    </div>
+{{ end }}
