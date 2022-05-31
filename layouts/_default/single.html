@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+    <div>
+
+        <div id="mainBG" style="background-image: url('{{ if $.Site.Params.mainbg }}{{ $.Site.Params.mainbg }}{{ else }}https://picsum.photos/1920/1080{{ end }}');">
+
+            {{ partial "utilities/wave"}}
+
+            <div class="centerAll space-y-4">
+                <div class="title font-bold text-center">
+                    {{if  $.Title }}<h1>{{ .Title }}</h1>{{else}}Missing Title{{end}}
+                </div>
+                <div class="text-4xl italic text-center">
+                    {{if  $.Params.Author }} by {{ .Params.Author }}{{end}}
+                </div>
+            </div>
+        </div>
+
+
+        <main class="container mx-auto mt-8 px-4 xl:px-0 justify-around space-y-2.5 whitespace-normal text-justify">
+            {{ .Content }}
+        </main>
+
+    </div>
+{{ end }}
+

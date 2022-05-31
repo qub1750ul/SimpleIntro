@@ -1,3 +1,88 @@
+/*
+ * Loading tailwindcss components
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+ * Configuring tailwindcss components
+ */
+@layer base {
+    /*
+     * Preflight (https://tailwindcss.com/docs/preflight)
+     * By default in tailwindcss preflight is enabled
+     * Consequently headings and lists are unstyled
+     */
+
+    /*
+     * Following styles are sorted by HTML tag
+     */
+
+    /*
+     * <a>
+     * Hyperlinks
+     */
+    a {
+        @apply text-blue-400 underline;
+    }
+
+    /*
+     * <blockquote>
+     * Blockquotes
+     */
+    blockquote {
+        @apply text-gray-700 font-mono;
+    }
+
+    /*
+     * <header>
+     * Headings
+     */
+    h1 {
+        @apply text-6xl;
+    }
+
+    h2 {
+        @apply text-5xl;
+    }
+
+    h3 {
+        @apply text-4xl;
+    }
+
+    h4 {
+        @apply text-3xl;
+    }
+
+    h5 {
+        @apply text-2xl;
+    }
+
+    h6 {
+        @apply text-xl;
+    }
+
+    /*
+     * <ol>
+     * Ordered list
+     */
+    ol {
+        list-style: decimal;
+        margin: 10;
+        padding: 5;
+    }
+
+    /*
+     * <ul>
+     * Unordered list
+     */
+    ul {
+        list-style: disc;
+        margin: 10;
+        padding: 5;
+    }
+
+}
+
+
