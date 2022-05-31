@@ -1,0 +1,39 @@
+{{ $data := .Site.Data.home }}
+
+<section id="skills" class="mt-12">
+    <div class="md:flex justify-center">
+        {{ partial "home/homeTitle" (dict "title" "Skills") }}
+    </div>
+
+    {{if $data.skills.list}}
+        <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
+
+        {{ range $data.skills.list }}
+            <div class="w-full rounded overflow-hidden shadow-lg">
+                <div class="">
+                    <div class="font-bold text-xl mb-2 py-2 px-6 bg-gray-500">
+                        <div class="flex">
+                            <img
+                            src="{{ .icon }}"
+                            width="50px"
+                            class="bg-gray-300 py-1 px-1 rounded-full"
+                            />
+                            <div class="my-auto ml-2">
+                                {{ .name }}
+                            </div>
+                        </div>
+                    </div>
+
+                <p class="text-gray-700 text-base px-6 pb-4">
+                    {{ replace .text "\n" "<br />" | safeHTML }}
+                </p>
+                </div>
+            </div>
+        {{end}}
+
+        </div>
+
+    {{else}}
+        <div class="mt-4 text-xl text-center">Skills don't exist</div>
+    {{end}}
+</section>

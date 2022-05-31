@@ -1,0 +1,32 @@
+{{ $data := .Site.Data.home }}
+
+<section id="projects" class="mt-12">
+    <div class="md:flex justify-center">
+        {{ partial "home/homeTitle" (dict "title" "Projects") }}
+    </div>
+
+    {{if $data.skills.list}}
+        <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {{ range $data.project.list }}
+            <div class="w-full rounded overflow-hidden shadow-lg">
+                <a href="{{ .url }}" target="_blank">
+                <img
+                class="w-full h-48"
+                src="{{ .image }}"
+                alt="Sunset in the mountains"
+                />
+                </a>
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">{{ .title }}</div>
+                    <p class="text-gray-700 text-base">
+                        {{ .text }}
+                    </p>
+                </div>
+            </div>
+            {{end}}
+        </div>
+
+    {{else}}
+        <div class="mt-4 text-xl text-center">Projects does not exist</div>
+    {{end}}
+</section>
