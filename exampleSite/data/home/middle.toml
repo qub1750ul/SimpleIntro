@@ -1,5 +1,6 @@
 title = "Skills"
 id = "skills"
+text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
 
 [[list]]
     name = "go"
