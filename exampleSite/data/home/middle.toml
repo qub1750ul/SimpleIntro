@@ -3,8 +3,8 @@ id = "skills"
 text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
 
 [[list]]
-    name = "go"
-    icon = "https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg"
+    name = "Music"
+    iconClass = "fa fa-headphones"
     text = """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -12,7 +12,7 @@ text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus q
     """
 [[list]]
     name = "React"
-    icon = "https://devicons.github.io/devicon/devicon.git/icons/react/react-original.svg"
+    iconImg = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     text = """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus quia, nulla! Maiores et perferendis eaque,
@@ -20,7 +20,7 @@ text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus q
     """
 [[list]]
     name = "C/C++"
-    icon = "https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg"
+    iconImg = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
     text = """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus quia, nulla! Maiores et perferendis eaque,
