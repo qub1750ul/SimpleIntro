@@ -1,10 +1,17 @@
 {{ define "main" }}
 
     <div>
-
         <div id="mainBG" style="background-image: url('{{ if $.Site.Params.mainbg }}{{ $.Site.Params.mainbg }}{{ else }}https://picsum.photos/1920/1080{{ end }}');">
 
-            {{ partial "utilities/wave"}}
+        <!-- layouts file variable -->
+        {{ $layouts := .Site.Data.site.layouts }}
+
+        <!-- Wave: load if enabled in data/site/layouts.single.enableWave -->
+        {{ range $layouts.single }}
+            {{if eq .enableWave "true"}}
+                {{ partial "utilities/wave" .}}
+            {{end}}
+        {{end}}
 
             <div class="centerAll space-y-4">
                 <div class="title font-bold text-center">
