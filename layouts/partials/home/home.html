@@ -1,34 +1,60 @@
 <div>
+    <!-- Background: if defined, load the image from /config.params.mainbg, else use an image from picsum -->
     <div
-    id="mainBG"
-    style="background-image: url('{{ if $.Site.Params.mainbg }}{{ $.Site.Params.mainbg }}{{ else }}https://picsum.photos/1920/1080{{ end }}');"
+    id = "mainBG"
+    style = "background-image: url(' {{ if $.Site.Params.mainbg }} {{ $.Site.Params.mainbg }} {{ else }} https://picsum.photos/1920/1080 {{ end }} ');"
     >
 
-    {{ partial "utilities/wave" .}}
+    <!-- layouts file variable -->
+    {{ $layouts := .Site.Data.site.layouts }}
 
-    <div class="centerAll">
-        <div class="title text-6xl font-bold text-center">
-            {{if  $.Site.Params.maintitle }}
-                {{ $.Site.Params.maintitle }}
-            {{else}}
-                Hello, World
-            {{end}}
+    <!-- Wave: load if enabled in data/site/layouts.home.enableWave -->
+    {{ range $layouts.home }}
+        {{if eq .enableWave "true"}}
+            {{ partial "utilities/wave" .}}
+        {{end}}
+    {{end}}
+
+        <!-- Title and maintext, centered on the background image -->
+        <div class="centerAll">
+
+            <!-- Site title -->
+            <div class="title text-6xl font-bold text-center">
+                {{if  $.Site.Params.maintitle }}
+                    {{ $.Site.Params.maintitle }}
+                {{else}}
+                    Hello, World
+                {{end}}
+            </div>
+
+            <!-- Site maintext/description -->
+            <div class="text text-xl text-center">
+                {{if $.Site.Params.maintext}}
+                    {{ $.Site.Params.maintext }}
+                {{else}}
+                    Edit config.toml/params
+                {{end}}
+            </div>
+
         </div>
 
-        <div class="text text-xl text-center">
-            {{if $.Site.Params.maintext}}
-                {{ $.Site.Params.maintext }}
-            {{else}}
-                Edit config.toml/params
-            {{end}}
-        </div>
     </div>
-</div>
 
+    <!-- Page content: load widget only if enabled in data/site/layouts.home -->
     <main class="container mx-auto mt-8 px-4 xl:px-0">
-        {{partial "utilities/widgetAbout" .}}
-        {{partial "utilities/widgetBoxIconText" .}}
-        {{partial "utilities/widgetBoxImageText" .}}
+        {{ range $layouts.home }}
+            {{if eq .enableTopWidget "true"}}
+                    {{partial "utilities/widgetSocial" $.Site}}
+            {{end}}
+
+            {{if eq .enableMiddleWidget "true"}}
+                {{partial "utilities/widgetBoxIconText" $.Site}}
+            {{end}}
+
+            {{if eq .enableBottomWidget "true"}}
+                {{partial "utilities/widgetBoxImageText" $.Site}}
+            {{end}}
+        {{end}}
     </main>
 
 </div>

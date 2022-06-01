@@ -1,14 +1,14 @@
 {{ $data := .Site.Data.home }}
 
-<section id="skills" class="mt-12">
+<section id="{{$data.middle.id}}" class="mt-12">
     <div class="md:flex justify-center">
-        {{ partial "home/homeTitle" (dict "title" "Skills") }}
+        {{ partial "home/homeTitle" (dict "title" $data.middle.title) }}
     </div>
 
-    {{if $data.skills.list}}
+    {{if $data.middle.list}}
         <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
 
-        {{ range $data.skills.list }}
+        {{ range $data.middle.list }}
             <div class="w-full rounded overflow-hidden shadow-lg">
                 <div class="">
                     <div class="font-bold text-xl mb-2 py-2 px-6 bg-gray-500">
@@ -34,6 +34,6 @@
         </div>
 
     {{else}}
-        <div class="mt-4 text-xl text-center">Skills don't exist</div>
+        <div class="mt-4 text-xl text-center">Undefined list</div>
     {{end}}
 </section>

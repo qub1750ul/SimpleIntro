@@ -1,4 +1,6 @@
-title = "Hello, World!"
+mainTitle = "About Me"
+secondaryTitle = "Hello, World!"
+id = "about"
 
 text = """
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
