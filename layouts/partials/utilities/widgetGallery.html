@@ -1,0 +1,33 @@
+{{ $data := .Site.Data.home }}
+
+<section id="{{$data.gallery.id}}" class="mt-12">
+    <div class="md:flex justify-center">
+        <h2> {{ partial "home/homeTitle" (dict "title" $data.gallery.title) }} </h2>
+    </div>
+
+    <p class="font-normal text-lg my-1.5">
+        {{$data.gallery.text}}
+    </p>
+
+    {{if $data.gallery.list}}
+        <div class="mt-8 grid grid-flow-row grid-flow-col gap-3.5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center">
+            {{ range $data.gallery.list }}
+                <div class="w-full shadow-lg">
+                    <a href="{{ .url }}" target="_blank">
+                        <img
+                        class="w-full h-48"
+                        src="{{ .image }}"
+                        alt="{{ .imageAlt }}"
+                        />
+                    </a>
+                    <h3 class="font-bold text-xl mb-2 text-center">
+                            {{ .title }}
+                    </h3>
+                </div>
+            {{end}}
+        </div>
+
+    {{else}}
+        <div class="mt-4 text-xl text-center">Undefined list</div>
+    {{end}}
+</section>
