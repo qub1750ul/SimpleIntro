@@ -1,3 +1,6 @@
+title = "Skills"
+id = "skills"
+
 [[list]]
     name = "go"
     icon = "https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg"

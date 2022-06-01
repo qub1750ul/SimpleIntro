@@ -1,12 +1,13 @@
 {{ $data := .Site.Data.home }}
 
-<section id="about" class="md:flex justify-around">
+<section id="{{$data.top.id}}" class="md:flex justify-around">
     <div class="my-auto md:mr-4">
-        {{ partial "home/homeTitle" (dict "title" "About Me") }}
+        {{ partial "home/homeTitle" (dict "title" $data.top.mainTitle) }}
 
         <div class="flex mt-3 gap-3 text-xl">
-            {{ range $data.about.link }}
-            <a href="{{.url}}"><i class="{{ .icon }}"></i></a>{{end}}
+            {{ range .Site.Data.home.top.link }}
+                <a href="{{.url}}"><i class="{{ .icon }}"></i></a>
+            {{end}}
         </div>
 
     </div>
@@ -14,16 +15,16 @@
     <div class="mt-4 md:mt-0 md:ml-4">
 
         <div class="text-2xl font-bold">
-            {{ if $data.about.title }}
-                {{$data.about.title}}
+            {{ if $data.top.secondaryTitle }}
+                {{$data.top.secondaryTitle}}
             {{else}}
                 You can put text in data/home/about.toml/title
             {{end}}
         </div>
 
         <div class="text-lg mt-3">
-            {{ if $data.about.text}}
-                {{ replace $data.about.text "\n" "<br />" | safeHTML }}
+            {{ if $data.top.text}}
+                {{ replace $data.top.text "\n" "<br />" | safeHTML }}
             {{else}}
                 You can put text in data/home/about.toml/text
             {{end}}
