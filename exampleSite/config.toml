@@ -9,6 +9,8 @@ publishDir = "public"
     name = "John Doe"
     mainTitle = "Simple-intro"
     mainText = "Just simple intro theme for hugo"
+    enableDevicon = "true"
+    enableFontAwesome = "true"
 
 [menus]
     [[menu.main]]

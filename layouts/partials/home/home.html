@@ -54,6 +54,10 @@
             {{if eq .enableBottomWidget "true"}}
                 {{partial "utilities/widgetBoxImageText" $.Site}}
             {{end}}
+
+            {{if eq .enableGalleryWidget "true"}}
+                {{partial "utilities/widgetGallery" $.Site}}
+            {{end}}
         {{end}}
     </main>
 

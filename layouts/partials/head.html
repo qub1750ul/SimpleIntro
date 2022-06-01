@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/navbar.css" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/tailwind.min.css" />
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/fontawesome/css/all.min.css" >
+
+    {{if eq $.Site.Params.enableFontAwesome "true" }}
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/fontawesome/css/all.min.css" >
+    {{end}}
 
     <!-- CSS - Remote -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    {{if eq $.Site.Params.enableDevicon "true" }}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    {{end}}
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
