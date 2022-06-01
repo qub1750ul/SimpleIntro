@@ -1,0 +1,14 @@
+title = "Gallery"
+id = "gallery"
+text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+
+[[list]]
+    title = "lorem"
+    image = "https://picsum.photos/400/200"
+    imageAlt = "Random image from Picsum"
+
+[[list]]
+    title = "lorem"
+    image = "https://picsum.photos/400/200"
+    imageAlt = "Random image from Picsum"
+
